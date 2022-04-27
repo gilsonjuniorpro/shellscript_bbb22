@@ -1,6 +1,6 @@
 
 initial=1
-times=5
+times=20
 sleepTime=5
 
 echo "This script will vote $times times"
@@ -17,8 +17,8 @@ do
   echo "wait for loading 1"
   sleep $(( RANDOM % (10 - 5 + 1 ) + 5 ))
 
-  echo "selecting Broken Linn"
-  adb shell input tap 300 1869
+  echo "selecting Scooby Doo"
+  adb shell input tap 300 2094
 
   echo "wait for loading 2"
   sleep $sleepTime
@@ -45,7 +45,7 @@ do
   adb exec-out screencap -p > screen_$t.png
 
   echo "Click on Vote Again"
-  adb shell input tap 539 913
+  adb shell input tap 539 910
 
   echo "wait for loading 6"
   sleep 3
